@@ -1,6 +1,5 @@
-function opsRelacionais () { 
-    let a =10 
-    let b = 5 
+function opsRelacionais (a, b) { 
+   
 
     return `maior que : ${a>b}  igual : ${a === b}   diferente: ${a!==b}`;
    

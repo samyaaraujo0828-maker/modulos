@@ -1,7 +1,5 @@
- function declaracaoDeVar () { 
-    let nome = "lucas";
-    let idade = "16";
-    let curso = "informatica";
+ function declaracaoDeVar (nome,idade,curso) { 
+ 
     
 
     return `nome : ${nome}, idade: ${idade}, curso: ${curso}`;

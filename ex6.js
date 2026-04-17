@@ -1,8 +1,6 @@
 
-function estruturaSwitchCase () { 
-    let dia = 3 ; 
-    let resultado ; 
-
+function estruturaSwitchCase (dia, resultado) { 
+    
     switch ( dia ){ 
         case 1: 
           resultado = "domingo";

@@ -1,6 +1,5 @@
-function estruturaIfElse () { 
-    let numero = -3 
-
+function estruturaIfElse (numero) { 
+    
     if ( numero > 0 ) { 
         return " numero positivo"
     } else if ( numero < 0){   

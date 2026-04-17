@@ -9,9 +9,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^5.2.1",
     "nodemon": "^3.1.14"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samyaaraujo0828-maker/modulos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/samyaaraujo0828-maker/modulos/issues"
+  },
+  "homepage": "https://github.com/samyaaraujo0828-maker/modulos#readme",
+  "description": ""
 }

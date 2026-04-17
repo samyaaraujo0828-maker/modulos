@@ -13,50 +13,70 @@ import {vetores} from './ex8.js';
 
 const app = express()
 
-app.get('/ex1', (req, res) => {
-  let declaracao = declaracaoDeVar()
-  res.send(declaracao)
+app.get('/ex1/:nome/:idade/:curso', (req, res) => {
+  let {nome,idade,curso} = req.params
+
+  
+  res.send(declaracaoDeVar(nome,idade,curso));
 })
 
-app.get('/ex2', (req, res) => {
-    let ops = opsAritimeticos()
-    res.send(ops)
+// ?A=30&B=60
+app.get('/ex2/', (req, res) => {
+  let {A,B} = req.query
+    
+  A = Number (A);
+  B = Number (B);
+
+    res.send(opsAritimeticos(A,B));
   })
  
-  app.get('/ex3', (req, res) => {
-    let relacionais = opsRelacionais()
-    res.send(relacionais)
+  app.get('/ex3/:', (req, res) => {
+    let {a,b} = req.params
+
+    
+    res.send(opsRelacionais(a,b));
   })
   
 
-  app.get('/ex4', (req, res) => {
-    let logicos = opsLogicos()
-    res.send(logicos)
+  app.get('/ex4/:idade/:temCNH', (req, res) => {
+    let {idade, temCNH} = req.params
+
+
+    res.send(opsLogicos(idade, temCNH));
   })
  
 
-  app.get('/ex5', (req, res) => {
-    let estrutura = estruturaIfElse()
-    res.send(estrutura)
+  app.get('/ex5/: numero', (req, res) => {
+    let {numero} = req.params
+
+    res.send(estruturaIfElse(numero));
   })
  
 
-  app.get('/ex6', (req, res) => {
-    let estruturaS = estruturaSwitchCase()
-    res.send(estruturaSwitchCase())
+  app.get('/ex6/:dia/: resultado', (req, res) => {
+    let {dia, resultado} = req.params
+
+
+    res.send(estruturaSwitchCase(dia, resultado));
   })
  
 
-  app.get('/ex7', (req, res) => {
-    let repeticao = estruturaRepetiçao()
-    res.send(repeticao)
+  app.get('/ex7/:resultado', (req, res) => {
+    let {resultado} = req.params
+
+
+    res.send(estruturaRepetiçao(resultado));
   })
  
-  app.get('/ex8', (req, res) => {
-    let vetor = vetores()
-    res.send(vetor)
+  app.get('/ex8/:nome', (req, res) => {
+    let {nome} = req.params
+
+
+    res.send(vetores(nome))
   })
- 
+
+
+
 
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000')

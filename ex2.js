@@ -1,6 +1,5 @@
-function opsAritimeticos () { 
-    let A = 10 
-    let B = 5
+function opsAritimeticos (A,B) { 
+   
 
     let soma = A + B 
     let subtração = A - B 

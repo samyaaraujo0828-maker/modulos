@@ -1,7 +1,5 @@
-function opsLogicos () { 
-    let idade = 20 
-    let temCNH = true 
-
+function opsLogicos (idade, temCNH) { 
+    
     let podeDirigir = idade >= 18 && temCNH; 
 
     return `pode dirigir? ${podeDirigir}`;
