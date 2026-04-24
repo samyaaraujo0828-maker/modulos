@@ -1,8 +1,8 @@
-function vetores (nomes ){ 
+function vetores (primeiro, ultimo, tamanho, nomes){ 
    
-    let primeiro = nomes [ 0 ]
-    let ultimo = nomes [nomes.length - 1]; 
-    let tamanho = nomes . length;
+     primeiro = nomes [ 0 ]
+     ultimo = nomes [nomes.length - 1]; 
+     tamanho = nomes . length;
 
     return `primeiro : ${primeiro}, ultimo: ${ultimo}, tamanho: ${tamanho}`;
             

@@ -21,7 +21,7 @@ app.get('/ex1/:nome/:idade/:curso', (req, res) => {
 })
 
 // ?A=30&B=60
-app.get('/ex2/', (req, res) => {
+app.get('/ex2', (req, res) => {
   let {A,B} = req.query
     
   A = Number (A);
@@ -30,34 +30,37 @@ app.get('/ex2/', (req, res) => {
     res.send(opsAritimeticos(A,B));
   })
  
-  app.get('/ex3/:', (req, res) => {
+  app.get('/ex3/:a/:b', (req, res) => {
     let {a,b} = req.params
 
-    
+    a = Number (a);
+    b = Number (b);
+
     res.send(opsRelacionais(a,b));
   })
   
 
-  app.get('/ex4/:idade/:temCNH', (req, res) => {
-    let {idade, temCNH} = req.params
-
-
+  app.get('/ex4/:idade', (req, res) => {
+    let {idade} = req.params
+    let temCNH = idade>= 18
+    idade = Number (idade);
+    let podeDirigir = idade >= 18 && temCNH; 
     res.send(opsLogicos(idade, temCNH));
   })
  
 
-  app.get('/ex5/: numero', (req, res) => {
+  app.get('/ex5/:numero', (req, res) => {
     let {numero} = req.params
-
+    numero = Number (numero)
     res.send(estruturaIfElse(numero));
   })
  
 
-  app.get('/ex6/:dia/: resultado', (req, res) => {
-    let {dia, resultado} = req.params
-
-
-    res.send(estruturaSwitchCase(dia, resultado));
+  app.get('/ex6/:dia', (req, res) => {
+    let {dia  } = req.params
+    
+    dia = Number (dia)
+    res.send(estruturaSwitchCase(dia));
   })
  
 
@@ -68,11 +71,11 @@ app.get('/ex2/', (req, res) => {
     res.send(estruturaRepetiçao(resultado));
   })
  
-  app.get('/ex8/:nome', (req, res) => {
-    let {nome} = req.params
+  app.get('/ex8/:primeiro/:ultimo/:tamanho', (req, res) => {
+    let {primeiro, ultimo, tamanho} = req.params
 
 
-    res.send(vetores(nome))
+    res.send(vetores(primeiro, ultimo, tamanho))
   })
 
 

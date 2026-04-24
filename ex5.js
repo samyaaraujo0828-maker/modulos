@@ -7,5 +7,7 @@ function estruturaIfElse (numero) {
     }else { 
         return "numero é zero";
     } 
+
+    
 }    
 export{estruturaIfElse}
